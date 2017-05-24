@@ -22,13 +22,13 @@ module.exports = {
     env: {
       NODE_ENV: '"development"'
     },
-    port: 9000,
+    port: 8000,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     context: [ //代理路径
       '/api3',
     ],
-    proxypath: 'http://infoapi.games-cube.com',
+    proxypath: 'http://life.weimob.com/mobile',
     cssSourceMap: false
   },
 

@@ -50,7 +50,7 @@ if (context.length) {
 }
 
 server.use(proxyMiddleware('/api3', {
-  target: 'http://infoapi.games-cube.com',
+  target: 'http://life.weimob.com/mobile',
   changeOrigin: true,
 }))
 // server.use(proxyMiddleware('/m.ele.me@json', {

@@ -19,7 +19,7 @@ export default [{
     children: [
         {
             path: '',
-            redirect: '/popup'
+            redirect: '/Landing'
         },
         {
           path: '/index',
