@@ -12,6 +12,8 @@ const Player = r => require.ensure([], () => r(require('../page/Player')), 'Play
 const PlayerDetail = r => require.ensure([], () => r(require('../page/PlayerDetail')), 'PlayerDetail')
 const Speakers = r => require.ensure([], () => r(require('../page/Speakers')), 'Speakers')
 const Video = r => require.ensure([], () => r(require('../page/Video')), 'Video')
+const infiniteScroll = r => require.ensure([], () => r(require('../page/infiniteScroll')), 'infiniteScroll')
+const lazyload = r => require.ensure([], () => r(require('../page/lazyload')), 'lazyload')
 
 export default [{
     path: '/',
@@ -19,7 +21,7 @@ export default [{
     children: [
         {
             path: '',
-            redirect: '/Landing'
+            redirect: '/lazyload'
         },
         {
           path: '/index',
@@ -70,6 +72,13 @@ export default [{
           path: '/Video',
           component: Video,
         },
-
+        {
+          path: '/infiniteScroll',
+          component: infiniteScroll,
+        },
+        {
+          path: '/lazyload',
+          component: lazyload,
+        },
     ]
 }]

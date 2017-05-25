@@ -34,6 +34,7 @@
     "vue-axios": "^2.0.1",
     "vue-infinite-scroll": "^2.0.0",
     "vue-lazyload": "^1.0.0-rc10",
+    "vue-lazyload-img": "^2.0.2",
     "vue-material": "^0.7.1",
     "vue-router": "^2.1.1",
     "vuex": "^2.0.0"

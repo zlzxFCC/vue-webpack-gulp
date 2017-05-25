@@ -27,6 +27,13 @@
         </div>
       </div>
     </div>
+    <mu-raised-button label="左边弹出" @click="open('left')"/>
+
+    <mu-popup position="left" popupClass="demo-popup-left" :open="leftPopup" @close="close('left')">
+    <!-- <mu-raised-button label="切换主题" @click="openTheme" primary fullWidth/> -->
+    <mu-raised-button label="关闭弹框" @click="close('left')" primary fullWidth/>
+  </mu-popup>
+
   </div>
 </template>
 <script>
@@ -48,15 +55,25 @@ export default {
       },
       p: 1,
       newstNews: newstNews,
-      bannerNews:bannerNews
+      bannerNews:bannerNews,
+      leftPopup: false,
     }
   },
   computed: {
   },
   methods: {
+    openTheme(){
+        this.$emit('opentheme');
+    },
     setTitle () {
       this.$store.commit('set_title', '资讯')
-    }
+    },
+    open (position) {
+     this[position + 'Popup'] = true
+   },
+   close (position) {
+     this[position + 'Popup'] = false
+   }
   },
   filters: {
     pv
@@ -69,6 +86,15 @@ export default {
 }
 </script>
 <style lang="less">
+.demo-popup-left {
+  display: flex;
+  width: 85%;
+  max-width: 375px;
+  height: 100%;
+  align-items: center;
+  padding: 24px;
+}
+
 .news {
   &-list {
     background: #f0f0f0;
