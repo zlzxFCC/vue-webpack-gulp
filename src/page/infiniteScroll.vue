@@ -12,8 +12,6 @@
 
 <script>
 export default {
-  el: '#app',
-  template: document.querySelector('#template').innerHTML,
   data () {
     const list = []
     for (let i = 0; i < 15; i++) {
@@ -47,7 +45,7 @@ export default {
 <style lang="css">
 .demo-infinite-container{
   width: 100%;
-  height:100%;
+  height:100;
   overflow: auto;
   position: absolute;
   -webkit-overflow-scrolling: touch;
